@@ -1,7 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit"; // Cria a store
+import uiSlice from "./ui-slice";
 
 const store = configureStore({
-    reducer: {}
-})
+  reducer: {
+    ui: uiSlice.reducer,
+  },
+});
 
 export default store;
